@@ -3,10 +3,6 @@ const deconstructAttrs = attrs => {
   return attrKey.reduce((current, next) => current += `${next}="${attrs[next]}" `, '')
 }
 
-// const renderText = text => text
-
-// const renderDiv = 
-
 const renderTpl = props => {
   return `
     <template>${props}</template>
@@ -26,7 +22,6 @@ const renderElement = (name, attrs, children) => {
       const { tagName, children, ...atrrs} = item
       return renderElement(tagName, atrrs, children)
     }).reduce((pre, next) => pre+=next, '')
-  // console.log('childrenNode', childrenNode)
   return `
     <${name} ${deconstructAttrs(attrs)}>
       ${childrenNode}
