@@ -1,0 +1,21 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin columns-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin absoluteLayout($left, $right) {
+  position: absolute;
+  left: $left;
+  right: $right;
+}
+
+@mixin rect($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@include flex

@@ -20,5 +20,28 @@
         "content": "这个是effect_area"
       }
     ]
+  },
+  "cssSketch": {
+    "container": {
+      "layout": "flex",
+      "rect": [3963, 2760],
+      "isrefer": true,
+      "backgroud": "#7c0505"
+    },
+    "left_cover": {
+      "layout": "absolute",
+      "rect": [1780, 2560],
+      "coordinate": [100, 100]
+    },
+    "mid": {
+      "layout": "absolute",
+      "rect": [200, 2560],
+      "coordinate": [1879, 100]
+    },
+    "right_cover": {
+      "layout": "absolute",
+      "rect": [1780, 2560],
+      "coordinate": [2083, 100]
+    }
   }
 }
