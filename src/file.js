@@ -1,6 +1,7 @@
 // import { renderTpl, renderElement } from './helper/tpl.helper'
 
 const { renderTpl, renderElement } = require('./helper/tpl.helper')
+const cssPropSorter = require('./helper/css.helper')
 var fs = require("fs")
 
 fs.readFile('index.json', (err, data) => {
@@ -9,13 +10,21 @@ fs.readFile('index.json', (err, data) => {
   }
   const content = JSON.parse(data.toString())
   const htmlString = createHtmlString(content.vnodes)
-  createFile(htmlString)
+  const cssStrinbg = cssPropSorter.resolveSketch(content.cssSketch)
+  // console.log(cssPropSorter)
+  createFile(htmlString, cssStrinbg)
 })
 
-function createFile (data) {
+function createFile (htmlString, cssStrinbg) {
+  // console.log(htmlString)
   fs.writeFile(
     'output.vue',
-    `${data}`,
+    `
+      ${htmlString}
+      <style>
+        ${cssStrinbg}
+      </style>
+    `,
     (err, data) => {
       if(err) {
         return console.log(err);

@@ -9,39 +9,44 @@
   ],
   "vnodes": {
     "tagName": "div",
-    "className": "container",
+    "class": "container",
     "children": [
       {
         "tagName": "div",
-        "className": "effect_area"
+        "class": "left_cover"
       },
       {
-        "tagName": "text",
-        "content": "这个是effect_area"
+        "tagName": "div",
+        "class": "mid"
+      },
+      {
+        "tagName": "div",
+        "class": "right_cover"
       }
     ]
   },
   "cssSketch": {
     "container": {
-      "layout": "flex",
-      "rect": [3963, 2760],
-      "isrefer": true,
-      "backgroud": "#7c0505"
+      "rect": [396.3, 276.0],
+      "backgroud": "#7c0505",
+      "style": {
+        "position": "relative"
+      }
     },
     "left_cover": {
-      "layout": "absolute",
-      "rect": [1780, 2560],
-      "coordinate": [100, 100]
+      "rect": [178.0, 256.0],
+      "coordinate": [10.0, 10.0],
+      "backgroud": "green"
     },
     "mid": {
-      "layout": "absolute",
-      "rect": [200, 2560],
-      "coordinate": [1879, 100]
+      "rect": [20.0, 256.0],
+      "coordinate": [187.9, 10.0],
+      "backgroud": "purple"
     },
     "right_cover": {
-      "layout": "absolute",
-      "rect": [1780, 2560],
-      "coordinate": [2083, 100]
+      "rect": [178.0, 256.0],
+      "coordinate": [208.3, 10.0],
+      "backgroud": "gold"
     }
   }
 }
