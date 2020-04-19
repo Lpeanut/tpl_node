@@ -21,7 +21,10 @@
       },
       {
         "tagName": "div",
-        "class": "right_cover"
+        "class": "right_cover",
+        "children": [
+          
+        ]
       }
     ]
   },
