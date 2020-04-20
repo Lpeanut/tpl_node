@@ -7,6 +7,48 @@
     { "left": 20, "top": 0, "height": 5, "width": 2 },
     { "right": 20, "top": 0, "height": 5, "width": 2 }
   ],
+  "vnodess": {
+    "container": {
+      "tagName": "div",
+      "class": "container"
+    },
+    "cover": {
+      "tagName": "div",
+      "class": "cover",
+      "children": [
+        {
+          "tagName": "img",
+          "class": "cover_img"
+        },
+        {
+          "tagName": "div", 
+          "class": "cover_img_wrapper"
+        },
+        {
+          "tagName": "div",
+          "class": "cover_title"
+        },
+        {
+          "tagName": "div",
+          "class": "cover_author"
+        }
+      ]
+    },
+    "mid": {
+      "tagName": "div",
+      "class": "mid",
+      "children": [
+        {
+          "tagName": "div",
+          "class": "mid_text"
+        }
+      ]
+    },
+    "backCover": {
+      "tagName": "div",
+      "class": "back_cover"
+    }
+  },
   "vnodes": {
     "tagName": "div",
     "class": "container",
@@ -21,9 +63,17 @@
       },
       {
         "tagName": "div",
-        "class": "right_cover",
+        "class": "back_cover",
         "children": [
-          
+          {
+            "tagName": "svg",
+            "class": "back_cover",
+            "url": "xxx.svg",
+            "cssSketch": {
+              "rect": [39.0, 4.0],
+              "coordinate": [28.0, 28.0]
+            }
+          }
         ]
       }
     ]
