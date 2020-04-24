@@ -7,99 +7,98 @@
     { "left": 20, "top": 0, "height": 5, "width": 2 },
     { "right": 20, "top": 0, "height": 5, "width": 2 }
   ],
-  "vnodess": {
+  "vnodes": {
     "container": {
       "tagName": "div",
-      "class": "container"
+      "class": "container",
+      "sketch": {
+        "w": 3963,
+        "h": 2760,
+        "backgroud": "#7c0505",
+        "style": {
+          "position": "relative",
+          "word-break": "break-word"
+        }
+      }
     },
-    "cover": {
+    "fm": {
       "tagName": "div",
-      "class": "cover",
+      "class": "fm",
+      "sketch": {
+        "w": 1780,
+        "h": 2560,
+        "x": 2083,
+        "y": 100,
+        "backgroud": "gold"
+      },
       "children": [
         {
           "tagName": "img",
-          "class": "cover_img"
+          "class": "fm_img"
         },
         {
           "tagName": "div", 
-          "class": "cover_img_wrapper"
+          "class": "fm_img_wrapper"
         },
         {
           "tagName": "div",
-          "class": "cover_title"
+          "class": "fm_title"
         },
         {
           "tagName": "div",
-          "class": "cover_author"
+          "class": "fm_author"
         }
       ]
     },
     "mid": {
       "tagName": "div",
       "class": "mid",
+      "sketch": {
+        "w": 200,
+        "h": 2560,
+        "x": 1879,
+        "y": 100,
+        "backgroud": "purple"
+      },
       "children": [
         {
-          "tagName": "div",
-          "class": "mid_text"
+          "tagName": "text",
+          "class": "mid_text",
+          "content": "如何看待原油期货结算价持续刷新新低，😁历史上首次收于负值？",
+          "sketch": {
+            "w": 64,
+            "x": 68,
+            "y": 300,
+            "fontWeight": 400,
+            "fontSize": 56,
+            "lineHeight": 66
+          }
         }
       ]
     },
-    "backCover": {
+    "fd": {
       "tagName": "div",
-      "class": "back_cover"
-    }
-  },
-  "vnodes": {
-    "tagName": "div",
-    "class": "container",
-    "children": [
-      {
-        "tagName": "div",
-        "class": "left_cover"
+      "class": "fd",
+      "sketch": {
+        "w": 1780,
+        "h": 2560,
+        "x": 100,
+        "y": 100,
+        "backgroud": "green"
       },
-      {
-        "tagName": "div",
-        "class": "mid"
-      },
-      {
-        "tagName": "div",
-        "class": "back_cover",
-        "children": [
-          {
-            "tagName": "svg",
-            "class": "back_cover",
-            "url": "xxx.svg",
-            "cssSketch": {
-              "rect": [39.0, 4.0],
-              "coordinate": [28.0, 28.0]
-            }
+      "children": [
+        {
+          "tagName": "div",
+          "class": "fd_logo_svg",
+          "sketch": {
+            "w": 1780,
+            "h": 2560,
+            "x": 100,
+            "y": 100,
+            "backgroud": "green"
           }
-        ]
-      }
-    ]
-  },
-  "cssSketch": {
-    "container": {
-      "rect": [396.3, 276.0],
-      "backgroud": "#7c0505",
-      "style": {
-        "position": "relative"
-      }
-    },
-    "left_cover": {
-      "rect": [178.0, 256.0],
-      "coordinate": [10.0, 10.0],
-      "backgroud": "green"
-    },
-    "mid": {
-      "rect": [20.0, 256.0],
-      "coordinate": [187.9, 10.0],
-      "backgroud": "purple"
-    },
-    "right_cover": {
-      "rect": [178.0, 256.0],
-      "coordinate": [208.3, 10.0],
-      "backgroud": "gold"
+        }
+      ]
     }
   }
 }
