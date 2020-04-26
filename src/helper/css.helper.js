@@ -41,8 +41,8 @@ function filterInvalidProps (object) {
 // rect [w,h]
 function handleRect([w, h]) {
   console.log(w, h)
-  const width = w ? w * rate + 'px' : undefined
-  const height =  h ? h * rate + 'px' : undefined
+  const width = w ? w + 'px' : undefined
+  const height =  h ? h + 'px' : undefined
   return `
     width: ${width};
     height: ${height};`
@@ -52,15 +52,15 @@ function handleRect([w, h]) {
 function handleCoordinate([l, t]) {
   return `
     position: absolute;
-    left: ${l * rate}px;
-    top: ${t * rate}px;`
+    left: ${l}px;
+    top: ${t}px;`
 }
 
 function handleFont([weight, size, lineHeight]) {
   return `
     font-weight: ${weight};
-    font-size: ${size * rate}px;
-    line-height: ${lineHeight * rate}px;`
+    font-size: ${size}px;
+    line-height: ${lineHeight}px;`
 }
 
 function handleColor(color) {

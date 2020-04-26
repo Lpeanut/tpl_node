@@ -14,10 +14,12 @@
       "sketch": {
         "w": 3963,
         "h": 2760,
-        "backgroud": "#7c0505",
+        "backgroud": "#7C0505",
         "style": {
           "position": "relative",
-          "word-break": "break-word"
+          "word-break": "break-word",
+          "transform": "scale(0.37757575758)",
+          "transform-origin": "top left"
         }
       }
     },
@@ -28,25 +30,78 @@
         "w": 1780,
         "h": 2560,
         "x": 2083,
-        "y": 100,
-        "backgroud": "gold"
+        "y": 100
       },
       "children": [
         {
           "tagName": "img",
-          "class": "fm_img"
+          "class": "fm_img",
+          "sketch": {
+            "w": 1780,
+            "h": 1335,
+            "x": 0,
+            "y": 535
+          }
         },
         {
-          "tagName": "div", 
-          "class": "fm_img_wrapper"
+          "tagName": "img", 
+          "class": "fm_bg",
+          "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png",
+          "sketch": {
+            "w": 1780,
+            "h": 2560,
+            "x": 0,
+            "y": 0
+          }
         },
         {
-          "tagName": "div",
-          "class": "fm_title"
+          "tagName": "text",
+          "class": "fm_title",
+          "content": "如何看待原油期货结算价持续刷新新低？",
+          "sketch": {
+            "w": 1780,
+            "h": 86,
+            "x": 0,
+            "y": 2044,
+            "color": "#fff",
+            "fontSize": 80,
+            "lineHeight": 86,
+            "fontWeight": "500",
+            "style": {
+              "text-align": "center",
+              "letter-spacing":"1px"
+            }
+          }
         },
         {
-          "tagName": "div",
-          "class": "fm_author"
+          "tagName": "text",
+          "class": "fm_author",
+          "content": "唐纳德·特朗普",
+          "sketch": {
+            "w": 1780,
+            "h": 86,
+            "x": 0,
+            "y": 2186,
+            "color": "#fff",
+            "fontSize": 40,
+            "lineHeight": 50,
+            "fontWeight": "300",
+            "style": {
+              "text-align": "center"
+            }
+          }
+        },
+        {
+          "tagName": "img",
+          "class": "fm_logo_svg",
+          "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg",
+          "sketch": {
+            "w": 390,
+            "h": 39,
+            "x": 670,
+            "y": 2371,
+            "z-index": 2
+          }
         }
       ]
     },
@@ -57,21 +112,21 @@
         "w": 200,
         "h": 2560,
         "x": 1879,
-        "y": 100,
-        "backgroud": "purple"
+        "y": 100
       },
       "children": [
         {
           "tagName": "text",
           "class": "mid_text",
-          "content": "如何看待原油期货结算价持续刷新新低，😁历史上首次收于负值？",
+          "content": "如何看待原油期货结算价持续刷新新低😁历",
           "sketch": {
             "w": 64,
             "x": 68,
             "y": 300,
             "fontWeight": 400,
             "fontSize": 56,
-            "lineHeight": 66
+            "lineHeight": 66,
+            "color": "#FFF"
           }
         }
       ]
@@ -83,20 +138,97 @@
         "w": 1780,
         "h": 2560,
         "x": 100,
-        "y": 100,
-        "backgroud": "green"
+        "y": 100
       },
       "children": [
         {
-          "tagName": "div",
-          "class": "fd_logo_svg",
+          "tagName": "img",
+          "class": "fd_bg",
+          "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfd_1.png",
           "sketch": {
-            "w": 1780,
-            "h": 2560,
-            "x": 100,
-            "y": 100,
-            "backgroud": "green"
+            "w": 1630,
+            "h": 2460,
+            "x": 51,
+            "y": 50,
+            "z-index": 1
           }
+        },
+        {
+          "tagName": "img",
+          "class": "fd_logo_svg",
+          "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg",
+          "sketch": {
+            "w": 572,
+            "h": 41,
+            "x": 280,
+            "y": 280,
+            "z-index": 2
+          }
+        },
+        {
+          "tagName": "div",
+          "class": "fd_qrcode_box",
+          "sketch": {
+            "w": 200,
+            "h": 200,
+            "x": 782,
+            "y": 1921,
+            "z-index": 2,
+            "backgroud": "#FFF"
+          }
+        },
+        {
+          "tagName": "text",
+          "class": "fd_qrcode_text",
+          "sketch": {
+            "w": 200,
+            "h": 24,
+            "x": 782,
+            "y": 2130,
+            "z-index": 2,
+            "fontSize": 24,
+            "lineHeight": 24,
+            "fontWeight": "400",
+            "color": "#FFF",
+            "fontFamily": "PingFangSC-Regular,PingFang SC",
+            "style": {
+              "text-align": "center"
+            }
+          },
+          "content": "扫码阅读美篇原文"
+        },
+        {
+          "tagName": "div",
+          "class": "fd_barcode_box",
+          "sketch": {
+            "w": 320,
+            "h": 110,
+            "x": 722,
+            "y": 2245,
+            "z-index": 2,
+            "backgroud": "#FFF"
+          },
+          "content": "扫码阅读美篇原文"
+        },
+        {
+          "tagName": "text",
+          "class": "fd_barcode_text",
+          "sketch": {
+            "w": 210,
+            "h": 24,
+            "x": 776,
+            "y": 2365,
+            "z-index": 2,
+            "fontSize": 24,
+            "lineHeight": 24,
+            "fontWeight": "400",
+            "color": "#FFF",
+            "fontFamily": "PingFangSC-Regular,PingFang SC",
+            "style": {
+              "text-align": "center"
+            }
+          },
+          "content": "B123456123456"
         }
       ]
     }
