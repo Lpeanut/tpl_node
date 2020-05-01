@@ -5,7 +5,7 @@
  * 描述: css sktch => css string
  */
 
-const rate = 0.37757575758
+let rate = 0.37757575758
 
 const composeSketch = cssSketch => {
   const { x, y, w, h, backgroud, fontWeight, fontSize, lineHeight, color, style } = cssSketch
@@ -17,12 +17,12 @@ const composeSketch = cssSketch => {
     backgroud: backgroud,
     style: style
   }
-  console.log(sketchObject)
+  // console.log(sketchObject)
   return filterInvalidProps(sketchObject)
 }
 
 function filterInvalidProps (object) {
-  console.log(object)
+  // console.log(object)
   let result = {}
   for(let i in object) {
     const value = object[i]
@@ -34,13 +34,13 @@ function filterInvalidProps (object) {
       result[i] = value
     }
   }
-  console.log('result',result)
+  // console.log('result',result)
   return result
 }
 
 // rect [w,h]
 function handleRect([w, h]) {
-  console.log(w, h)
+  // console.log(w, h)
   const width = w ? w + 'px' : undefined
   const height =  h ? h + 'px' : undefined
   return `
@@ -97,7 +97,7 @@ const sketchReduceHandler = sketch => (string, key) => {
 
 const resolveSketch = cssSketch => {
   const composedSketch = composeSketch(cssSketch)
-  console.log(composedSketch)
+  // console.log(composedSketch)
   const skechKeys = Object.keys(composedSketch)
   const handler = sketchReduceHandler(composedSketch)
   return `{${skechKeys.reduce(handler, '')}}`

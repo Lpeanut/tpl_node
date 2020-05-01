@@ -10,7 +10,7 @@
   "vnodes": {
     "container": {
       "tagName": "div",
-      "class": "container",
+      "className": "container",
       "sketch": {
         "w": 3963,
         "h": 2760,
@@ -21,11 +21,16 @@
           "transform": "scale(0.37757575758)",
           "transform-origin": "top left"
         }
-      }
+      },
+      "children": [
+        {
+          "tagName": "slot"
+        }
+      ]
     },
     "fm": {
       "tagName": "div",
-      "class": "fm",
+      "className": "fm",
       "sketch": {
         "w": 1780,
         "h": 2560,
@@ -35,7 +40,7 @@
       "children": [
         {
           "tagName": "img",
-          "class": "fm_img",
+          "className": "fm_img",
           "sketch": {
             "w": 1780,
             "h": 1335,
@@ -45,7 +50,7 @@
         },
         {
           "tagName": "img", 
-          "class": "fm_bg",
+          "className": "fm_bg",
           "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png",
           "sketch": {
             "w": 1780,
@@ -56,7 +61,7 @@
         },
         {
           "tagName": "text",
-          "class": "fm_title",
+          "className": "fm_title",
           "content": "如何看待原油期货结算价持续刷新新低？",
           "sketch": {
             "w": 1780,
@@ -75,7 +80,7 @@
         },
         {
           "tagName": "text",
-          "class": "fm_author",
+          "className": "fm_author",
           "content": "唐纳德·特朗普",
           "sketch": {
             "w": 1780,
@@ -93,7 +98,7 @@
         },
         {
           "tagName": "img",
-          "class": "fm_logo_svg",
+          "className": "fm_logo_svg",
           "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg",
           "sketch": {
             "w": 390,
@@ -107,7 +112,7 @@
     },
     "mid": {
       "tagName": "div",
-      "class": "mid",
+      "className": "mid",
       "sketch": {
         "w": 200,
         "h": 2560,
@@ -117,7 +122,7 @@
       "children": [
         {
           "tagName": "text",
-          "class": "mid_text",
+          "className": "mid_text",
           "content": "如何看待原油期货结算价持续刷新新低😁历",
           "sketch": {
             "w": 64,
@@ -133,7 +138,7 @@
     },
     "fd": {
       "tagName": "div",
-      "class": "fd",
+      "className": "fd",
       "sketch": {
         "w": 1780,
         "h": 2560,
@@ -143,7 +148,7 @@
       "children": [
         {
           "tagName": "img",
-          "class": "fd_bg",
+          "className": "fd_bg",
           "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfd_1.png",
           "sketch": {
             "w": 1630,
@@ -155,7 +160,7 @@
         },
         {
           "tagName": "img",
-          "class": "fd_logo_svg",
+          "className": "fd_logo_svg",
           "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg",
           "sketch": {
             "w": 572,
@@ -167,7 +172,7 @@
         },
         {
           "tagName": "div",
-          "class": "fd_qrcode_box",
+          "className": "fd_qrcode_box",
           "sketch": {
             "w": 200,
             "h": 200,
@@ -179,7 +184,7 @@
         },
         {
           "tagName": "text",
-          "class": "fd_qrcode_text",
+          "className": "fd_qrcode_text",
           "sketch": {
             "w": 200,
             "h": 24,
@@ -199,7 +204,7 @@
         },
         {
           "tagName": "div",
-          "class": "fd_barcode_box",
+          "className": "fd_barcode_box",
           "sketch": {
             "w": 320,
             "h": 110,
@@ -212,7 +217,7 @@
         },
         {
           "tagName": "text",
-          "class": "fd_barcode_text",
+          "className": "fd_barcode_text",
           "sketch": {
             "w": 210,
             "h": 24,
