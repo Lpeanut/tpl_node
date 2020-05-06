@@ -14,6 +14,15 @@ const thumbnailZoomFn = `
   container.style.top = 0
 `
 
+const h5ZoomFn = `
+  const container = document.querySelectorAll(".fm");
+  container.forEach(element => {
+    element.style.position = "relative";
+    element.style.left = 0;
+    element.style.top = 0;
+  })
+`
+
 const fnToString = (string) => {
   return `
     mounted () {
@@ -24,5 +33,6 @@ const fnToString = (string) => {
 
 module.exports = {
   pdfZoomFn: fnToString(pdfZoomFn),
-  thumbnailZoomFn: fnToString(thumbnailZoomFn)
+  thumbnailZoomFn: fnToString(thumbnailZoomFn),
+  h5ZoomFn: fnToString(h5ZoomFn)
 }

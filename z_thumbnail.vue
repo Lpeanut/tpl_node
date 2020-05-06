@@ -1,6 +1,8 @@
 
     <template>
-      <div class="fm" ><img class="fm_img"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
+      <div class="wrapper">
+        <div class="fm" ><img class="fm_img"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
+      </div>
     </template>
     <script>
       export default {

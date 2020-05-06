@@ -1,11 +1,13 @@
 
     <template>
-      <div class="container" >
+      <div class="wrapper">
+        <div class="container" >
 
 <div class="mid" ><div class="mid_text" >如何看待原油期货结算价持续刷新新低😁历</div></div>
 <div class="fm" ><img class="fm_img"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
 <div class="fd" ><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfd_1.png" class="fd_bg"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg" class="fd_logo_svg"  /><div class="fd_qrcode_box" ></div><div class="fd_qrcode_text" >扫码阅读美篇原文</div><div content="扫码阅读美篇原文" class="fd_barcode_box" ></div><div class="fd_barcode_text" >B123456123456</div></div>
 </div>
+      </div>
     </template>
     <script>
       export default {

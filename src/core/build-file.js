@@ -1,5 +1,5 @@
 const { renderTpl } = require('../helper/render.helper')
-const { pdfZoomFn, thumbnailZoomFn } = require('./zoom-script')
+const { pdfZoomFn, thumbnailZoomFn, h5ZoomFn } = require('./zoom-script')
 
 const MODE = ['pdf', 'thumbnail', 'h5']
 
@@ -26,10 +26,11 @@ const buildModeThumbnail = (ctx) => {
 }
 // 导出h5文件
 const buildModeH5 = (ctx) => {
-  const { element: { fm }, css: { fm: fmCss } } = ctx
+  console.log(JSON.stringify(ctx))
+  const { element: { fm }, h5css: fmCss } = ctx
   const tpl = fm
   const style = qsStyle(fmCss)
-  ctx.h5 = renderTpl({tpl, style, script: thumbnailZoomFn})
+  ctx.h5 = renderTpl({tpl, style, script: h5ZoomFn})
 }
 
 module.exports = ctx => {

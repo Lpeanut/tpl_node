@@ -1,5 +1,4 @@
 const path = require('path')
-const { resolveVnodes } = require('./src/helper/tpl.helper')
 const { readFile, writeFile } = require('./src/utils/file.util')
 const init = require('./src/core/init')
 const buildElement = require('./src/core/build-element')
@@ -23,7 +22,6 @@ async function run () {
   writeFile('z_pdf.vue', ctx.pdfFile)
   writeFile('z_thumbnail.vue', ctx.thumbnail)
   writeFile('z_h5.vue', ctx.h5)
-  // console.log(JSON.stringify(ctx))
 }
 
 run()

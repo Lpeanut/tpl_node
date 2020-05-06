@@ -9,10 +9,12 @@ const deconstructAttrs = attrs => {
 
 // 渲染vue文件的三大层
 const renderTpl = props => {
-  const { tpl, style, script } = props
+  const { tpl, style, script, type } = props
   return `
     <template>
-      ${tpl}
+      <div class="wrapper">
+        ${tpl}
+      </div>
     </template>
     <script>
       export default {

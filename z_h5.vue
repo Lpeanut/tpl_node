@@ -1,16 +1,20 @@
 
     <template>
-      <div class="fm" ><img class="fm_img"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
+      <div class="wrapper">
+        <div class="fm" ><img class="fm_img"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
+      </div>
     </template>
     <script>
       export default {
         
     mounted () {
       
-  const container = document.querySelector('.fm')
-  container.style.transform = 'scale(0.18878787879)'
-  container.style.left = 0
-  container.style.top = 0
+  const container = document.querySelectorAll(".fm");
+  container.forEach(element => {
+    element.style.position = "relative";
+    element.style.left = 0;
+    element.style.top = 0;
+  })
 
     }
   
@@ -18,47 +22,47 @@
     </script>
     <style scoped>
       .fm{
-    width: 1780px;
-    height: 2560px;
+    width: 690px;
+    height: 992.3595505617977px;
     position: absolute;
-    left: 2083px;
-    top: 100px;}
+    left: 807.4550561797753px;
+    top: 38.764044943820224px;}
 .fm_img{
-    width: 1780px;
-    height: 1335px;
+    width: 690px;
+    height: 517.5px;
     position: absolute;
     left: 0px;
-    top: 535px;}
+    top: 207.3876404494382px;}
 .fm_bg{
-    width: 1780px;
-    height: 2560px;
+    width: 690px;
+    height: 992.3595505617977px;
     position: absolute;
     left: 0px;
     top: 0px;}
 .fm_title{
-    width: 1780px;
-    height: 86px;
+    width: 690px;
+    height: 33.337078651685395px;
     position: absolute;
     left: 0px;
-    top: 2044px;
+    top: 792.3370786516854px;
     font-weight: 500;
-    font-size: 80px;
-    line-height: 86px;color: #fff;text-align: center;letter-spacing: 1px;}
+    font-size: 31.01123595505618px;
+    line-height: 33.337078651685395px;color: #fff;text-align: center;letter-spacing: 1px;}
 .fm_author{
-    width: 1780px;
-    height: 86px;
+    width: 690px;
+    height: 33.337078651685395px;
     position: absolute;
     left: 0px;
-    top: 2186px;
+    top: 847.3820224719101px;
     font-weight: 300;
-    font-size: 40px;
-    line-height: 50px;color: #fff;text-align: center;}
+    font-size: 15.50561797752809px;
+    line-height: 19.382022471910112px;color: #fff;text-align: center;}
 .fm_logo_svg{
-    width: 390px;
-    height: 39px;
+    width: 151.17977528089887px;
+    height: 15.117977528089888px;
     position: absolute;
-    left: 670px;
-    top: 2371px;}
+    left: 259.7191011235955px;
+    top: 919.0955056179776px;}
 
     </style>
   

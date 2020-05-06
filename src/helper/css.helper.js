@@ -5,7 +5,7 @@
  * 描述: css sktch => css string
  */
 
-let rate = 0.37757575758
+let rate = 0
 
 const composeSketch = cssSketch => {
   const { x, y, w, h, backgroud, fontWeight, fontSize, lineHeight, color, style } = cssSketch
@@ -41,8 +41,8 @@ function filterInvalidProps (object) {
 // rect [w,h]
 function handleRect([w, h]) {
   // console.log(w, h)
-  const width = w ? w + 'px' : undefined
-  const height =  h ? h + 'px' : undefined
+  const width = w ? w * rate + 'px' : undefined
+  const height =  h ? h * rate + 'px' : undefined
   return `
     width: ${width};
     height: ${height};`
@@ -52,15 +52,15 @@ function handleRect([w, h]) {
 function handleCoordinate([l, t]) {
   return `
     position: absolute;
-    left: ${l}px;
-    top: ${t}px;`
+    left: ${l * rate}px;
+    top: ${t * rate}px;`
 }
 
 function handleFont([weight, size, lineHeight]) {
   return `
     font-weight: ${weight};
-    font-size: ${size}px;
-    line-height: ${lineHeight}px;`
+    font-size: ${size * rate}px;
+    line-height: ${lineHeight * rate}px;`
 }
 
 function handleColor(color) {
@@ -95,7 +95,8 @@ const sketchReduceHandler = sketch => (string, key) => {
   return string + fn(value)
 }
 
-const resolveSketch = cssSketch => {
+const resolveSketch = (cssSketch, zoomRate = 1) => {
+  rate = zoomRate // 处理 mobile 样式
   const composedSketch = composeSketch(cssSketch)
   // console.log(composedSketch)
   const skechKeys = Object.keys(composedSketch)
