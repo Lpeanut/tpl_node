@@ -20,8 +20,9 @@ async function run () {
 
   buildFiles(ctx)
 
-  writeFile('pdf.vue', ctx.pdfFile)
-  writeFile('thumbnail.vue', ctx.thumbnail)
+  writeFile('z_pdf.vue', ctx.pdfFile)
+  writeFile('z_thumbnail.vue', ctx.thumbnail)
+  writeFile('z_h5.vue', ctx.h5)
   // console.log(JSON.stringify(ctx))
 }
 

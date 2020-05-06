@@ -14,14 +14,14 @@ const renderTpl = props => {
     <template>
       ${tpl}
     </template>
-    <style>
-      ${style}
-    </style>
     <script>
       export default {
         ${script}
       }
     </script>
+    <style scoped>
+      ${style}
+    </style>
   `
 }
 

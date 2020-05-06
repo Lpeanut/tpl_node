@@ -1,11 +1,43 @@
 
     <template>
-      <div class="container" ><div class="fm" ><img class="fm_img"  /><img class="fm_bg" src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img class="fm_logo_svg" src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg"  /></div><div class="mid" ><div class="mid_text" >如何看待原油期货结算价持续刷新新低😁历</div></div><div class="fd" ><img class="fd_bg" src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfd_1.png"  /><img class="fd_logo_svg" src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg"  /><div class="fd_qrcode_box" ></div><div class="fd_qrcode_text" >扫码阅读美篇原文</div><div class="fd_barcode_box" content="扫码阅读美篇原文" ></div><div class="fd_barcode_text" >B123456123456</div></div></div>
+      <div class="container" >
+
+<div class="mid" ><div class="mid_text" >如何看待原油期货结算价持续刷新新低😁历</div></div>
+<div class="fm" ><img class="fm_img"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
+<div class="fd" ><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfd_1.png" class="fd_bg"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg" class="fd_logo_svg"  /><div class="fd_qrcode_box" ></div><div class="fd_qrcode_text" >扫码阅读美篇原文</div><div content="扫码阅读美篇原文" class="fd_barcode_box" ></div><div class="fd_barcode_text" >B123456123456</div></div>
+</div>
     </template>
-    <style>
+    <script>
+      export default {
+        
+    mounted () {
+      
+  const container = document.querySelector('.container')
+  container.style.transform = 'scale(0.37757575758)'
+
+    }
+  
+      }
+    </script>
+    <style scoped>
       .container{
     width: 3963px;
     height: 2760px;background: #7C0505;position: relative;word-break: break-word;transform: scale(0.37757575758);transform-origin: top left;}
+.mid{
+    width: 200px;
+    height: 2560px;
+    position: absolute;
+    left: 1879px;
+    top: 100px;}
+.mid_text{
+    width: 64px;
+    height: undefined;
+    position: absolute;
+    left: 68px;
+    top: 300px;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 66px;color: #FFF;}
 .fm{
     width: 1780px;
     height: 2560px;
@@ -48,21 +80,6 @@
     position: absolute;
     left: 670px;
     top: 2371px;}
-.mid{
-    width: 200px;
-    height: 2560px;
-    position: absolute;
-    left: 1879px;
-    top: 100px;}
-.mid_text{
-    width: 64px;
-    height: undefined;
-    position: absolute;
-    left: 68px;
-    top: 300px;
-    font-weight: 400;
-    font-size: 56px;
-    line-height: 66px;color: #FFF;}
 .fd{
     width: 1780px;
     height: 2560px;
@@ -113,9 +130,4 @@
     line-height: 24px;color: #FFF;text-align: center;}
 
     </style>
-    <script>
-      export default {
-        
-      }
-    </script>
   

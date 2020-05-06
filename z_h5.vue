@@ -2,7 +2,21 @@
     <template>
       <div class="fm" ><img class="fm_img"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >唐纳德·特朗普</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
     </template>
-    <style>
+    <script>
+      export default {
+        
+    mounted () {
+      
+  const container = document.querySelector('.fm')
+  container.style.transform = 'scale(0.18878787879)'
+  container.style.left = 0
+  container.style.top = 0
+
+    }
+  
+      }
+    </script>
+    <style scoped>
       .fm{
     width: 1780px;
     height: 2560px;
@@ -47,9 +61,4 @@
     top: 2371px;}
 
     </style>
-    <script>
-      export default {
-        undefined
-      }
-    </script>
   
