@@ -11,7 +11,7 @@ const buildStyle = (o, rate = 1) => {
   return style
 }
 
-const buildStyleH5 = o => buildStyle(o, 690 / 1780)
+const buildStyleH5 = o => buildStyle(o, 690 / 1510)
 
 const buildCss = ctx => {
   const json = ctx.json

@@ -26,7 +26,7 @@ const buildModeThumbnail = (ctx) => {
 }
 // 导出h5文件
 const buildModeH5 = (ctx) => {
-  console.log(JSON.stringify(ctx))
+  // console.log(JSON.stringify(ctx.json))
   const { element: { fm }, h5css: fmCss } = ctx
   const tpl = fm
   const style = qsStyle(fmCss)
@@ -34,7 +34,7 @@ const buildModeH5 = (ctx) => {
 }
 
 module.exports = ctx => {
-  buildModePdf(ctx)
+  // buildModePdf(ctx)
   buildModeThumbnail(ctx)
   buildModeH5(ctx)
 }

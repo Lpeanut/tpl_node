@@ -12,8 +12,8 @@
       "tagName": "div",
       "className": "container",
       "sketch": {
-        "w": 3220,
-        "h": 2160,
+        "w": 3963,
+        "h": 2760,
         "backgroud": "#7C0505",
         "style": {
           "position": "relative",
@@ -32,20 +32,20 @@
       "tagName": "div",
       "className": "fm",
       "sketch": {
-        "w": 1510,
-        "h": 2160,
-        "x": 1711,
-        "y": 0
+        "w": 1780,
+        "h": 2560,
+        "x": 2083,
+        "y": 100
       },
       "children": [
         {
           "tagName": "img",
           "className": "fm_img",
           "sketch": {
-            "w": 1510,
-            "h": 1133,
+            "w": 1780,
+            "h": 1335,
             "x": 0,
-            "y": 422
+            "y": 535
           }
         },
         {
@@ -53,8 +53,8 @@
           "className": "fm_bg",
           "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png",
           "sketch": {
-            "w": 1510,
-            "h": 2160,
+            "w": 1780,
+            "h": 2560,
             "x": 0,
             "y": 0
           }
@@ -64,10 +64,10 @@
           "className": "fm_title",
           "content": "如何看待原油期货结算价持续刷新新低？",
           "sketch": {
-            "w": 1510,
+            "w": 1780,
             "h": 86,
             "x": 0,
-            "y": 1726,
+            "y": 2044,
             "color": "#fff",
             "fontSize": 80,
             "lineHeight": 86,
@@ -83,10 +83,10 @@
           "className": "fm_author",
           "content": "唐纳德·特朗普",
           "sketch": {
-            "w": 1510,
+            "w": 1780,
             "h": 86,
             "x": 0,
-            "y": 1847,
+            "y": 2186,
             "color": "#fff",
             "fontSize": 40,
             "lineHeight": 50,
@@ -104,7 +104,7 @@
             "w": 390,
             "h": 39,
             "x": 670,
-            "y": 2000,
+            "y": 2371,
             "z-index": 2
           }
         }
@@ -115,9 +115,9 @@
       "className": "mid",
       "sketch": {
         "w": 200,
-        "h": 2160,
-        "x": 1510,
-        "y": 0
+        "h": 2560,
+        "x": 1879,
+        "y": 100
       },
       "children": [
         {
@@ -127,7 +127,7 @@
           "sketch": {
             "w": 64,
             "x": 68,
-            "y": 320,
+            "y": 300,
             "fontWeight": 400,
             "fontSize": 56,
             "lineHeight": 66,
@@ -140,10 +140,10 @@
       "tagName": "div",
       "className": "fd",
       "sketch": {
-        "w": 1480,
-        "h": 2100,
-        "x": 30,
-        "y": 30
+        "w": 1780,
+        "h": 2560,
+        "x": 100,
+        "y": 100
       },
       "children": [
         {
@@ -151,10 +151,10 @@
           "className": "fd_bg",
           "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfd_1.png",
           "sketch": {
-            "w": 1480,
-            "h": 2100,
-            "x": 0,
-            "y": 0,
+            "w": 1630,
+            "h": 2460,
+            "x": 51,
+            "y": 50,
             "z-index": 1
           }
         },
@@ -163,10 +163,10 @@
           "className": "fd_logo_svg",
           "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg",
           "sketch": {
-            "w": 390,
+            "w": 572,
             "h": 41,
-            "x": 100,
-            "y": 100,
+            "x": 280,
+            "y": 280,
             "z-index": 2
           }
         },
@@ -174,10 +174,10 @@
           "tagName": "div",
           "className": "fd_qrcode_box",
           "sketch": {
-            "w": 170,
-            "h": 170,
-            "x": 655,
-            "y": 1599,
+            "w": 200,
+            "h": 200,
+            "x": 782,
+            "y": 1921,
             "z-index": 2,
             "backgroud": "#FFF"
           }
@@ -188,8 +188,8 @@
           "sketch": {
             "w": 200,
             "h": 24,
-            "x": 640,
-            "y": 1777,
+            "x": 782,
+            "y": 2130,
             "z-index": 2,
             "fontSize": 24,
             "lineHeight": 24,

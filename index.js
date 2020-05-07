@@ -4,20 +4,28 @@ const init = require('./src/core/init')
 const buildElement = require('./src/core/build-element')
 const buildCss = require('./src/core/build-css')
 const buildFiles = require('./src/core/build-file')
+const { getRawData } = require('./src/cores/data/index')
 
 let ctx = {}
-const jsonPath = path.resolve(__dirname,'index.json')
+// const jsonPath = path.resolve(__dirname,'index.json')
 
-async function run () {
-  const jsonData = await readFile(jsonPath)
+async function run (pageType = 'hard') {
+  // const jsonData = await readFile(jsonPath)
   
-  init(ctx, jsonData)  // 数据初始化处理
+  // await init(ctx, jsonData)  // 数据初始化处理
 
+  ctx.json = await getRawData(pageType)
+  
+  
   buildElement(ctx)
 
   buildCss(ctx)
 
+  console.log(JSON.stringify(ctx))
+
+
   buildFiles(ctx)
+  // console.log(JSON.stringify(ctx))
 
   writeFile('z_pdf.vue', ctx.pdfFile)
   writeFile('z_thumbnail.vue', ctx.thumbnail)
@@ -26,13 +34,3 @@ async function run () {
 
 run()
 
-
-
-// readFile(jsonPath).then(content => {
-//   const { vnodes } = content
-//   const result = resolveVnodes(vnodes)
-//   const tpl = result.tpl
-//   // /Users/ccjx/Desktop/template-generator/template-generator/src/views/test-page/index.vue
-//   writeFile('output.vue', tpl)
-
-// })

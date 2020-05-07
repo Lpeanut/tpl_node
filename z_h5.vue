@@ -22,47 +22,47 @@
     </script>
     <style scoped>
       .fm{
-    width: 690px;
-    height: 992.3595505617977px;
+    width: 813.3774834437086px;
+    height: 1169.8013245033112px;
     position: absolute;
-    left: 807.4550561797753px;
-    top: 38.764044943820224px;}
+    left: 951.8344370860927px;
+    top: 45.6953642384106px;}
 .fm_img{
-    width: 690px;
-    height: 517.5px;
+    width: 813.3774834437086px;
+    height: 610.0331125827814px;
     position: absolute;
     left: 0px;
-    top: 207.3876404494382px;}
+    top: 244.4701986754967px;}
 .fm_bg{
-    width: 690px;
-    height: 992.3595505617977px;
+    width: 813.3774834437086px;
+    height: 1169.8013245033112px;
     position: absolute;
     left: 0px;
     top: 0px;}
 .fm_title{
-    width: 690px;
-    height: 33.337078651685395px;
+    width: 813.3774834437086px;
+    height: 39.29801324503311px;
     position: absolute;
     left: 0px;
-    top: 792.3370786516854px;
+    top: 934.0132450331126px;
     font-weight: 500;
-    font-size: 31.01123595505618px;
-    line-height: 33.337078651685395px;color: #fff;text-align: center;letter-spacing: 1px;}
+    font-size: 36.556291390728475px;
+    line-height: 39.29801324503311px;color: #fff;text-align: center;letter-spacing: 1px;}
 .fm_author{
-    width: 690px;
-    height: 33.337078651685395px;
+    width: 813.3774834437086px;
+    height: 39.29801324503311px;
     position: absolute;
     left: 0px;
-    top: 847.3820224719101px;
+    top: 998.9006622516556px;
     font-weight: 300;
-    font-size: 15.50561797752809px;
-    line-height: 19.382022471910112px;color: #fff;text-align: center;}
+    font-size: 18.278145695364238px;
+    line-height: 22.8476821192053px;color: #fff;text-align: center;}
 .fm_logo_svg{
-    width: 151.17977528089887px;
-    height: 15.117977528089888px;
+    width: 178.21192052980132px;
+    height: 17.821192052980134px;
     position: absolute;
-    left: 259.7191011235955px;
-    top: 919.0955056179776px;}
+    left: 306.158940397351px;
+    top: 1083.4370860927152px;}
 
     </style>
   

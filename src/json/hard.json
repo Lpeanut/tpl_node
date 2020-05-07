@@ -1,0 +1,225 @@
+{
+  "container": {
+    "tagName": "div",
+    "className": "container",
+    "sketch": {
+      "w": 3963,
+      "h": 2760,
+      "backgroud": "#7C0505",
+      "style": {
+        "position": "relative",
+        "word-break": "break-word",
+        "transform": "scale(0.37757575758)",
+        "transform-origin": "top left"
+      }
+    },
+    "children": [{
+      "tagName": "slot"
+    }]
+  },
+  "fm": {
+    "tagName": "div",
+    "className": "fm",
+    "sketch": {
+      "w": 1780,
+      "h": 2560,
+      "x": 2083,
+      "y": 100
+    },
+    "children": [{
+        "tagName": "img",
+        "className": "fm_img",
+        "sketch": {
+          "w": 1780,
+          "h": 1335,
+          "x": 0,
+          "y": 535
+        }
+      },
+      {
+        "tagName": "img",
+        "className": "fm_bg",
+        "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png",
+        "sketch": {
+          "w": 1780,
+          "h": 2560,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "tagName": "text",
+        "className": "fm_title",
+        "content": "如何看待原油期货结算价持续刷新新低？",
+        "sketch": {
+          "w": 1780,
+          "h": 86,
+          "x": 0,
+          "y": 2044,
+          "color": "#fff",
+          "fontSize": 80,
+          "lineHeight": 86,
+          "fontWeight": "500",
+          "style": {
+            "text-align": "center",
+            "letter-spacing": "1px"
+          }
+        }
+      },
+      {
+        "tagName": "text",
+        "className": "fm_author",
+        "content": "唐纳德·特朗普",
+        "sketch": {
+          "w": 1780,
+          "h": 86,
+          "x": 0,
+          "y": 2186,
+          "color": "#fff",
+          "fontSize": 40,
+          "lineHeight": 50,
+          "fontWeight": "300",
+          "style": {
+            "text-align": "center"
+          }
+        }
+      },
+      {
+        "tagName": "img",
+        "className": "fm_logo_svg",
+        "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg",
+        "sketch": {
+          "w": 390,
+          "h": 39,
+          "x": 670,
+          "y": 2371,
+          "z-index": 2
+        }
+      }
+    ]
+  },
+  "mid": {
+    "tagName": "div",
+    "className": "mid",
+    "sketch": {
+      "w": 200,
+      "h": 2560,
+      "x": 1879,
+      "y": 100
+    },
+    "children": [{
+      "tagName": "text",
+      "className": "mid_text",
+      "content": "如何看待原油期货结算价持续刷新新低😁历",
+      "sketch": {
+        "w": 64,
+        "x": 68,
+        "y": 300,
+        "fontWeight": 400,
+        "fontSize": 56,
+        "lineHeight": 66,
+        "color": "#FFF"
+      }
+    }]
+  },
+  "fd": {
+    "tagName": "div",
+    "className": "fd",
+    "sketch": {
+      "w": 1780,
+      "h": 2560,
+      "x": 100,
+      "y": 100
+    },
+    "children": [{
+        "tagName": "img",
+        "className": "fd_bg",
+        "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfd_1.png",
+        "sketch": {
+          "w": 1630,
+          "h": 2460,
+          "x": 51,
+          "y": 50,
+          "z-index": 1
+        }
+      },
+      {
+        "tagName": "img",
+        "className": "fd_logo_svg",
+        "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg",
+        "sketch": {
+          "w": 572,
+          "h": 41,
+          "x": 280,
+          "y": 280,
+          "z-index": 2
+        }
+      },
+      {
+        "tagName": "div",
+        "className": "fd_qrcode_box",
+        "sketch": {
+          "w": 200,
+          "h": 200,
+          "x": 782,
+          "y": 1921,
+          "z-index": 2,
+          "backgroud": "#FFF"
+        }
+      },
+      {
+        "tagName": "text",
+        "className": "fd_qrcode_text",
+        "sketch": {
+          "w": 200,
+          "h": 24,
+          "x": 782,
+          "y": 2130,
+          "z-index": 2,
+          "fontSize": 24,
+          "lineHeight": 24,
+          "fontWeight": "400",
+          "color": "#FFF",
+          "fontFamily": "PingFangSC-Regular,PingFang SC",
+          "style": {
+            "text-align": "center"
+          }
+        },
+        "content": "扫码阅读美篇原文"
+      },
+      {
+        "tagName": "div",
+        "className": "fd_barcode_box",
+        "sketch": {
+          "w": 320,
+          "h": 110,
+          "x": 722,
+          "y": 2245,
+          "z-index": 2,
+          "backgroud": "#FFF"
+        },
+        "content": "扫码阅读美篇原文"
+      },
+      {
+        "tagName": "text",
+        "className": "fd_barcode_text",
+        "sketch": {
+          "w": 210,
+          "h": 24,
+          "x": 776,
+          "y": 2365,
+          "z-index": 2,
+          "fontSize": 24,
+          "lineHeight": 24,
+          "fontWeight": "400",
+          "color": "#FFF",
+          "fontFamily": "PingFangSC-Regular,PingFang SC",
+          "style": {
+            "text-align": "center"
+          }
+        },
+        "content": "B123456123456"
+      }
+    ]
+  }
+}
