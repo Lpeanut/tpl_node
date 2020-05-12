@@ -6,6 +6,10 @@ const buildCss = require('./src/core/build-css')
 const buildFiles = require('./src/core/build-file')
 const { getRawData } = require('./src/cores/data/index')
 
+require('./src/complier/complier-pdf')
+require('./src/complier/complier-thumbnail')
+require('./src/complier/complier-h5')
+
 let ctx = {}
 // const jsonPath = path.resolve(__dirname,'index.json')
 
@@ -21,9 +25,6 @@ async function run (pageType = 'hard') {
 
   buildCss(ctx)
 
-  console.log(JSON.stringify(ctx))
-
-
   buildFiles(ctx)
   // console.log(JSON.stringify(ctx))
 
@@ -32,5 +33,5 @@ async function run (pageType = 'hard') {
   writeFile('z_h5.vue', ctx.h5)
 }
 
-run()
+// run()
 

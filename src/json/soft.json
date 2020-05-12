@@ -31,12 +31,13 @@
     "children": [
       {
         "tagName": "img",
-        "className": "fm_img",
+        "className": "fm_imgs",
+        "src": "https://t-primg.meipian.me/users/71105617/O2C7F1EFE-2222-419E-B8F9-8D2ACF4C84E0$L0$0011.jpeg?imageMogr2/crop/!1694x1694a577a0/format/jpg",
         "sketch": {
           "w": 1510,
           "h": 1133,
           "x": 0,
-          "y": 422
+          "y": 450
         }
       },
       {
@@ -72,7 +73,7 @@
       {
         "tagName": "text",
         "className": "fm_author",
-        "content": "唐纳德·特朗普",
+        "content": "{{author || '唐纳德·特朗普'}}",
         "sketch": {
           "w": 1510,
           "h": 86,
