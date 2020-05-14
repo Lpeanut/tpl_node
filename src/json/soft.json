@@ -32,7 +32,18 @@
       {
         "tagName": "img",
         "className": "fm_imgs",
-        "src": "https://t-primg.meipian.me/users/71105617/O2C7F1EFE-2222-419E-B8F9-8D2ACF4C84E0$L0$0011.jpeg?imageMogr2/crop/!1694x1694a577a0/format/jpg",
+        "src": "./IMG1.KPG",
+        "sketch": {
+          "w": 1510,
+          "h": 1133,
+          "x": 0,
+          "y": 450
+        }
+      },
+      {
+        "tagName": "div",
+        "className": "fm_imgs",
+        "src": "./IMG1.KPG",
         "sketch": {
           "w": 1510,
           "h": 1133,
