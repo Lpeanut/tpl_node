@@ -6,7 +6,7 @@ const { buildCss } = require('../cores/handler-css')
 const { createFileContent } = require('../cores/handler-file')
 const { pdfZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
 
-const jsonpath = path.resolve(__dirname, '../json/hard.json')
+const jsonpath = path.resolve(__dirname, '../json2/soft.json')
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据

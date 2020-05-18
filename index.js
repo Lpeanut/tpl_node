@@ -7,13 +7,13 @@ const buildFiles = require('./src/core/build-file')
 const { getRawData } = require('./src/cores/data/index')
 
 require('./src/complier/complier-pdf')
-require('./src/complier/complier-thumbnail')
-require('./src/complier/complier-h5')
+// require('./src/complier/complier-thumbnail')
+// require('./src/complier/complier-h5')
 
 let ctx = {}
 // const jsonPath = path.resolve(__dirname,'index.json')
 
-async function run (pageType = 'hard') {
+async function run (pageType = 'soft') {
   // const jsonData = await readFile(jsonPath)
   
   // await init(ctx, jsonData)  // 数据初始化处理

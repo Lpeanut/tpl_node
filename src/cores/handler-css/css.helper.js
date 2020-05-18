@@ -8,14 +8,15 @@
 let rate = 0
 
 const composeSketch = cssSketch => {
-  const { x, y, w, h, backgroud, fontWeight, fontSize, lineHeight, color, style } = cssSketch
+  const { xy, wh, z, backgroud, font, color, style } = cssSketch
   const sketchObject = {
-    rect: [w, h],
-    coordinate: [x, y],
-    font: [fontWeight, fontSize, lineHeight],
+    rect: wh,
+    coordinate: xy,
+    font: font,
     color: color,
     backgroud: backgroud,
-    style: style
+    style: style,
+    zindex: z
   }
   // console.log(sketchObject)
   return filterInvalidProps(sketchObject)
@@ -56,9 +57,16 @@ function handleCoordinate([l, t]) {
     top: ${t * rate}px;`
 }
 
-function handleFont([weight, size, lineHeight]) {
+// coordinate [l,t]
+function handleZindex(z) {
+  return `
+    z-index: ${z}`
+}
+
+function handleFont([size, lineHeight, weight, family]) {
   return `
     font-weight: ${weight};
+    font-family: ${family};
     font-size: ${size * rate}px;
     line-height: ${lineHeight * rate}px;`
 }
@@ -86,7 +94,8 @@ const RULE_TYPE_MAP = {
   font: handleFont,
   color: handleColor,
   backgroud: handleBgColor,
-  style: handleStyle
+  style: handleStyle,
+  zindex: handleZindex
 }
 
 const sketchReduceHandler = sketch => (string, key) => {

@@ -1,4 +1,4 @@
-const { pdfZoomFn, thumbnailZoomFn, h5ZoomFn } = require('./zoom-script')
+// const { pdfZoomFn, thumbnailZoomFn, h5ZoomFn } = require('./zoom-script')
 const { vueTemplate } = require('./vue-shape')
 
 const createFileContent = params => {

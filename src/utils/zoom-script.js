@@ -2,7 +2,7 @@ const rateEnum = {
   pdf: 0.37757575758,
   thumbnail: 0.37757575758 * 0.5,
   // thumbnail: 1,
-  h5: 690 / 1510
+  h5: 690 / 1480
 }
 
 const pdfZoomFn = `
@@ -18,8 +18,8 @@ const thumbnailZoomFn = `
   container.style.top = 0
 `
 
-const h5ZoomFn = `
-  const container = document.querySelectorAll(".fm");
+const h5ZoomFn = className => `
+  const container = document.querySelectorAll(".${className}");
   container.forEach(element => {
     element.style.transform = 'scale(${rateEnum.h5})'
     element.style.transformOrigin = 'top left'
@@ -27,6 +27,8 @@ const h5ZoomFn = `
     element.style.top = 0;
   })
 `
+
+
 
 const caclWrapperStyle = (type = 'pdf', w, h) => {
   const rate = rateEnum[type]
@@ -52,6 +54,7 @@ const fnToString = (string) => {
 module.exports = {
   pdfZoomFn: fnToString(pdfZoomFn),
   thumbnailZoomFn: fnToString(thumbnailZoomFn),
-  h5ZoomFn: fnToString(h5ZoomFn),
+  h5ZoomFn: fnToString(h5ZoomFn('fm')),
+  h5FdZoomFn: fnToString(h5ZoomFn('fd')),
   caclWrapperStyle
 }

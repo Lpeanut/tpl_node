@@ -4,18 +4,18 @@ const { separateJson } = require('../cores/data/format-data.js')
 const { buildElement } = require('../cores/handler-html/element-to-string')
 const { buildCss } = require('../cores/handler-css')
 const { createFileContent } = require('../cores/handler-file')
-const { h5ZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
+const { h5ZoomFn, h5FdZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
 
-const jsonpath = path.resolve(__dirname, '../json/soft.json')
+const jsonpath = path.resolve(__dirname, '../json2/soft.json')
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据
 const handleJsonFile = async () => {
   const json = await readFile(jsonpath)
-  const { fm } = json
-  wrapperStyle = handleWrapperStyle(fm.sketch)
+  const { fd } = json
+  wrapperStyle = handleWrapperStyle(fd.sketch)
   return {
-    fm: separateJson(fm)
+    fd: separateJson(fd)
   }
 }
 
@@ -25,17 +25,19 @@ const handleWrapperStyle = sketch => {
 }
 
 const elementToString = (elements) => {
-  return elements.fm
+  return elements.fd
 }
 
 const run = async () => {
   const data = await handleJsonFile()
   const elements = buildElement(data)
   const elementString = elementToString(elements)
+  console.log(elements)
   const css = buildCss(data, wrapperStyle)
   const params = {
     element: elementString,
-    script: h5ZoomFn,
+    // script: h5ZoomFn,
+    script: h5FdZoomFn,
     css
   }
   const fileContent = createFileContent(params)

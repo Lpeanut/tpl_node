@@ -1,0 +1,173 @@
+{
+  "container": {
+    "name": "container",
+    "sketch": {
+      "w": 3220,
+      "h": 2160,
+      "backgroud": "#fff",
+      "style": {
+        "position": "relative",
+        "word-break": "break-word",
+        "transform-origin": "top left"
+      }
+    },
+    "children": [
+      {
+        "name": "slot"
+      }
+    ]
+  },
+  "fm": {
+    "name": "fm",
+    "sketch": {
+      "wh": [1480,2100],
+      "xy": [1711,30]
+    },
+    "children": [
+      {
+        "name": "fm_imgs",
+        "src": "%=fmUrl",
+        "sketch": {
+          "wh": [962,962],
+          "xy": [271,657],
+          "z": 2
+        }
+      },
+      {
+        "name": "fm_img_mask",
+        "src": "./images/2003_yfm_2.png",
+        "sketch": {
+          "wh": [1462,1103],
+          "xy": [0,582],
+          "z": 3
+        }
+      },
+      { 
+        "name": "fm_bg",
+        "src": "./images/2003_yfm_1.png",
+        "sketch": {
+          "wh": [1480,2100],
+          "xy": [0,0]
+        }
+      },
+      {
+        "name": "fm_title",
+        "content": "%=fmTitle",
+        "sketch": {
+          "wh": [1042, 86],
+          "xy": [233.5, 225],
+          "color": "#333",
+          "font": [64, 86, 500],
+          "textAlign": "center",
+          "style": {
+            "text-align": "center",
+            "letter-spacing":"1px"
+          }
+        }
+      },
+      {
+        "name": "fm_author",
+        "content": "%=fmAuthor",
+        "sketch": {
+          "wh": [352, 50],
+          "xy": [579, 356],
+          "color": "#333",
+          "font": [32, 50, 300],
+          "textAlign": "center"
+        }
+      }
+    ]
+  },
+  "mid": {
+    "name": "mid",
+    "sketch": {
+      "wh": [200, 2100],
+      "xy": [1511, 31]
+    },
+    "children": [
+      {
+        "name": "mid_text",
+        "content": "%=fmTitle",
+        "sketch": {
+          "wh": [64],
+          "xy": [68, 176],
+          "font": [56, 66, 400],
+          "color": "#000"
+        }
+      }
+    ]
+  },
+  "fd": {
+    "name": "fd",
+    "sketch": {
+      "wh": [1480, 2100],
+      "xy": [31, 31],
+      "backgroud": "#D5EFFE"
+    },
+    "children": [
+      {
+        "name": "fd_bg",
+        "src": "./images/2003_yfd_1.png",
+        "sketch": {
+          "z": 1,
+          "wh": [557, 250],
+          "xy": [427, 690]
+        }
+      },
+      {
+        "name": "fd_logo_svg",
+        "src": "https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg",
+        "sketch": {
+          "z-index": 2,
+          "wh": [390, 41],
+          "xy": [100, 100]
+        }
+      },
+      {
+        "name": "fd_qrcode_box",
+        "sketch": {
+          "z": 2,
+          "backgroud": "#FFF",
+          "wh": [170, 170],
+          "xy": [655, 1599]
+        }
+      },
+      {
+        "name": "fd_qrcode_text",
+        "sketch": {
+          "fontFamily": "PingFangSC-Regular,PingFang SC",
+          "wh": [200, 24],
+          "xy": [640, 1777],
+          "z": 2,
+          "font": [24, 24, 400, "PingFangSC-Regular,PingFang SC"],
+          "color": "#FFF",
+          "textAlign": "center"
+        },
+        "content": "%=tailPageText"
+      },
+      {
+        
+        "name": "fd_barcode_box",
+        "sketch": {
+          "z": 2,
+          "wh": [320, 110],
+          "xy": [722, 2245],
+          "backgroud": "#FFF"
+        },
+        "content": "扫码阅读美篇原文"
+      },
+      {
+        "name": "fd_barcode_text",
+        "content": "%=tradeNo",
+        "sketch": {
+          "z": 2,
+          "wh": [210, 24],
+          "xy": [776, 2365],
+          "font": [24, 24, 400, "PingFangSC-Regular,PingFang SC"],
+          "color": "#FFF",
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 
     <template>
       <div class="wrapper">
-        <div class="fm" ><img src="https://t-primg.meipian.me/users/71105617/O2C7F1EFE-2222-419E-B8F9-8D2ACF4C84E0$L0$0011.jpeg?imageMogr2/crop/!1694x1694a577a0/format/jpg" class="fm_imgs"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png" class="fm_bg"  /><div class="fm_title" >如何看待原油期货结算价持续刷新新低？</div><div class="fm_author" >{{author || '唐纳德·特朗普'}}</div><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg" class="fm_logo_svg"  /></div>
+        <div class="fd" ><img src="./images/2003_yfd_1.png" class="fd_bg"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg" class="fd_logo_svg"  /><div class="fd_qrcode_box" ></div><div class="fd_qrcode_text" >扫码阅读美篇原文</div><div content="扫码阅读美篇原文" class="fd_barcode_box" ></div><div class="fd_barcode_text" >B123456123456</div></div>
       </div>
     </template>
     <script>
@@ -9,9 +9,9 @@
         
     mounted () {
       
-  const container = document.querySelectorAll(".fm");
+  const container = document.querySelectorAll(".fd");
   container.forEach(element => {
-    element.style.transform = 'scale(0.45695364238410596)'
+    element.style.transform = 'scale(0.46621621621621623)'
     element.style.transformOrigin = 'top left'
     element.style.left = 0;
     element.style.top = 0;
@@ -22,53 +22,59 @@
       }
     </script>
     <style scoped>
-      .fm{
-    width: 1510px;
-    height: 2160px;
+      .fd{
+    width: 1480px;
+    height: 2100px;
     position: absolute;
-    left: 1711px;
-    top: 0px;}
-.fm_imgs{
-    width: 1510px;
-    height: 1133px;
+    left: 31px;
+    top: 31px;background: #D5EFFE;}
+.fd_bg{
+    width: 557px;
+    height: 250px;
     position: absolute;
-    left: 0px;
-    top: 450px;}
-.fm_bg{
-    width: 1510px;
-    height: 2160px;
-    position: absolute;
-    left: 0px;
-    top: 0px;}
-.fm_title{
-    width: 1510px;
-    height: 86px;
-    position: absolute;
-    left: 0px;
-    top: 1726px;
-    font-weight: 500;
-    font-size: 80px;
-    line-height: 86px;color: #fff;text-align: center;letter-spacing: 1px;}
-.fm_author{
-    width: 1510px;
-    height: 86px;
-    position: absolute;
-    left: 0px;
-    top: 1847px;
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 50px;color: #fff;text-align: center;}
-.fm_logo_svg{
+    left: 427px;
+    top: 690px;}
+.fd_logo_svg{
     width: 390px;
-    height: 39px;
+    height: 41px;
     position: absolute;
-    left: 670px;
-    top: 2000px;}
+    left: 100px;
+    top: 100px;}
+.fd_qrcode_box{
+    width: 170px;
+    height: 170px;
+    position: absolute;
+    left: 655px;
+    top: 1599px;background: #FFF;}
+.fd_qrcode_text{
+    width: 200px;
+    height: 24px;
+    position: absolute;
+    left: 640px;
+    top: 1777px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;color: #FFF;text-align: center;}
+.fd_barcode_box{
+    width: 320px;
+    height: 110px;
+    position: absolute;
+    left: 722px;
+    top: 2245px;background: #FFF;}
+.fd_barcode_text{
+    width: 210px;
+    height: 24px;
+    position: absolute;
+    left: 776px;
+    top: 2365px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;color: #FFF;text-align: center;}
 
     .wrapper{
       position: relative;
       width: 690px;
-      height: 987.0198675496689px;
+      height: 979.0540540540541px;
       overflow: hidden;
     }
   

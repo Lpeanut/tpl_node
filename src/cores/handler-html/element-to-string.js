@@ -20,7 +20,7 @@ const elementToString = o => {
 const buildElement = json => {
   const elements = {}
   for(let key in json) {
-    elements[key] = elementToString(json[key].element)
+    elements[key] = elementToStri                        ng(json[key].element)
   }
   return elements
 }
