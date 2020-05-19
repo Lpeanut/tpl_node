@@ -5,14 +5,18 @@ const { renderNode } = require('./element-render')
   const childrenNode = !children.length
     ? ''
     : children.map(item => {
-        const { tagName, children, ...attrs} = item
+        const { children, ...attrs} = item
+        const { src, content, slot, component } = item
+        const tagName = src ? 'img' : content ? 'text' : slot ? 'slot' : component ? 'component' : 'div'
         return renderElement(tagName, attrs, children)
       }).reduce((pre, next) => pre+=next, '')
   return renderNode(tagName, attrs, childrenNode)
 }
 
 const elementToString = o => {
-  const { tagName, children, ...attrs } = o;
+  const { children, ...attrs } = o;
+  const { src, content, slot, component } = o
+  const tagName = src ? 'img' : content ? 'text' : slot ? 'slot' : component ? 'component' : 'div'
   const tplstr = renderElement(tagName, attrs, children)
   return tplstr
 }

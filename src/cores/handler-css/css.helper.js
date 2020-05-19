@@ -8,7 +8,7 @@
 let rate = 0
 
 const composeSketch = cssSketch => {
-  const { xy, wh, z, backgroud, font, color, style } = cssSketch
+  const { xy, wh, z, backgroud, font, color, style, textAlign } = cssSketch
   const sketchObject = {
     rect: wh,
     coordinate: xy,
@@ -16,7 +16,8 @@ const composeSketch = cssSketch => {
     color: color,
     backgroud: backgroud,
     style: style,
-    zindex: z
+    zindex: z,
+    textAlign: textAlign
   }
   // console.log(sketchObject)
   return filterInvalidProps(sketchObject)
@@ -42,8 +43,8 @@ function filterInvalidProps (object) {
 // rect [w,h]
 function handleRect([w, h]) {
   // console.log(w, h)
-  const width = w ? w * rate + 'px' : undefined
-  const height =  h ? h * rate + 'px' : undefined
+  const width = w ? w * rate + 'px' : 'auto'
+  const height =  h ? h * rate + 'px' : 'auto'
   return `
     width: ${width};
     height: ${height};`
@@ -60,10 +61,16 @@ function handleCoordinate([l, t]) {
 // coordinate [l,t]
 function handleZindex(z) {
   return `
-    z-index: ${z}`
+    z-index: ${z};`
 }
 
-function handleFont([size, lineHeight, weight, family]) {
+function handleTextAlign (textAlign) {
+  return `
+    text-align: ${textAlign};
+  `
+}
+
+function handleFont([size, lineHeight, weight, family = '']) {
   return `
     font-weight: ${weight};
     font-family: ${family};
@@ -95,7 +102,8 @@ const RULE_TYPE_MAP = {
   color: handleColor,
   backgroud: handleBgColor,
   style: handleStyle,
-  zindex: handleZindex
+  zindex: handleZindex,
+  textAlign: handleTextAlign
 }
 
 const sketchReduceHandler = sketch => (string, key) => {

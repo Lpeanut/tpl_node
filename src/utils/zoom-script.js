@@ -1,6 +1,6 @@
 const rateEnum = {
   pdf: 0.37757575758,
-  thumbnail: 0.37757575758 * 0.5,
+  thumbnail: 0.37757575758 * 0.53,
   // thumbnail: 1,
   h5: 690 / 1480
 }

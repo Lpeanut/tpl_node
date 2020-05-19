@@ -4,7 +4,8 @@ const { separateJson } = require('../cores/data/format-data.js')
 const { buildElement } = require('../cores/handler-html/element-to-string')
 const { buildCss } = require('../cores/handler-css')
 const { createFileContent } = require('../cores/handler-file')
-const { h5ZoomFn, h5FdZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
+const { h5FdZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
+const { h5FmScript, h5FdScript } = require('../platforms/h5')
 
 const jsonpath = path.resolve(__dirname, '../json2/soft.json')
 let wrapperStyle
@@ -20,8 +21,8 @@ const handleJsonFile = async () => {
 }
 
 const handleWrapperStyle = sketch => {
-  const {w, h} = sketch
-  return caclWrapperStyle('h5', w, h)
+  const {wh} = sketch
+  return caclWrapperStyle('h5', wh[0], wh[1])
 }
 
 const elementToString = (elements) => {
@@ -37,7 +38,7 @@ const run = async () => {
   const params = {
     element: elementString,
     // script: h5ZoomFn,
-    script: h5FdZoomFn,
+    script: h5FdScript,
     css
   }
   const fileContent = createFileContent(params)

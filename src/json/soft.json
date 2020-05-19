@@ -67,7 +67,7 @@
       {
         "tagName": "text",
         "className": "fm_title",
-        "content": "%=fmTitle",
+        "content": "%=title",
         "sketch": {
           "w": 1042,
           "h": 86,
@@ -86,7 +86,7 @@
       {
         "tagName": "text",
         "className": "fm_author",
-        "content": "%=fmAuthor",
+        "content": "%=author",
         "sketch": {
           "w": 352,
           "h": 50,
@@ -128,7 +128,7 @@
       {
         "tagName": "text",
         "className": "mid_text",
-        "content": "%=fmTitle",
+        "content": "%=title",
         "sketch": {
           "w": 64,
           "x": 68,
@@ -206,7 +206,7 @@
             "text-align": "center"
           }
         },
-        "content": "扫码阅读美篇原文"
+        "content": "%=tailPageText"
       },
       {
         "tagName": "div",
@@ -219,7 +219,7 @@
           "z-index": 2,
           "backgroud": "#FFF"
         },
-        "content": "扫码阅读美篇原文"
+        "content": "%=tailPageText"
       },
       {
         "tagName": "text",

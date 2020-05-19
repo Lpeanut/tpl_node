@@ -3,7 +3,6 @@ const { template } = require('./index')
 // const matchTag = /^<(.|\n)*>$/
 const matchTag = /<(\d|\s|\w|\/|=|:|\.|\[|\]|,)*>/g
 const t = template.replace(/\n*/g, '')
-// console.log('%c⧭', 'color: #00a3cc', t);
 
 
 const b = t.match(matchTag)

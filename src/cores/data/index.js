@@ -36,8 +36,8 @@ const formatJsonData = (json) => {
   const { container, mid, fm, fd } = json
   const result = {
     container: separateJson(container),
-    mid: separateJson(mid),
     fm: separateJson(fm),
+    mid: separateJson(mid),
     fd: separateJson(fd)
   }
   return result

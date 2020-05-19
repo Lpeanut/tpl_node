@@ -200,7 +200,7 @@
               "text-align": "center"
             }
           },
-          "content": "扫码阅读美篇原文"
+          "content": "%=tailPageText"
         },
         {
           "tagName": "div",
@@ -213,7 +213,7 @@
             "z-index": 2,
             "backgroud": "#FFF"
           },
-          "content": "扫码阅读美篇原文"
+          "content": "%=tailPageText"
         },
         {
           "tagName": "text",

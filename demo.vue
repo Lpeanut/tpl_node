@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="container">
-      <div class="mid"><div class="mid_text">{{fmTitle}}</div></div>
+      <div class="mid"><div class="mid_text">{{title}}</div></div>
       <div class="fm">
         <img src="IMG1.KPG" class="fm_imgs" />
         <div :src="fmImg" class="fm_imgs"></div>
@@ -9,8 +9,8 @@
           src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/yfm_1.png"
           class="fm_bg"
         />
-        <div class="fm_title">{{fmTitle}}</div>
-        <div class="fm_author">{{fmAuthor}}</div>
+        <div class="fm_title">{{title}}</div>
+        <div class="fm_author">{{author}}</div>
         <img
           src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fd.svg"
           class="fm_logo_svg"
@@ -27,7 +27,7 @@
         <div class="fd_qrcode_box">
           <img :src="qrcode" alt="">
         </div>
-        <div class="fd_qrcode_text">扫码阅读美篇原文</div>
+        <div class="fd_qrcode_text">%=tailPageText</div>
         <div class="fd_barcode_box">
           <img :src="barcode" alt="">
         </div>

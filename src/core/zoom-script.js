@@ -1,6 +1,6 @@
 const pdfZoomRate = 0.37757575758
 
-const thumbnailZoomRage = pdfZoomRate * 0.5
+const thumbnailZoomRage = pdfZoomRate * 0.53
 
 const pdfZoomFn = `
   const container = document.querySelector('.container')

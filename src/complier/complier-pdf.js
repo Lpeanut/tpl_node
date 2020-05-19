@@ -4,27 +4,34 @@ const { separateJson } = require('../cores/data/format-data.js')
 const { buildElement } = require('../cores/handler-html/element-to-string')
 const { buildCss } = require('../cores/handler-css')
 const { createFileContent } = require('../cores/handler-file')
-const { pdfZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
+// const { pdfZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
+const { caclWrapperStyle } = require('../utils/zoom-script')
+const { pdfScript } = require('../platforms/pdf')
+const json = require('../json2/soft')
 
-const jsonpath = path.resolve(__dirname, '../json2/soft.json')
+
+const jsonpath = path.resolve(__dirname, '../json2/hard.json')
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据
 const handleJsonFile = async () => {
-  const json = await readFile(jsonpath)
+  // const json = await readFile(jsonpath)
+  console.log(json)
   const { container, mid, fm, fd } = json
   wrapperStyle = handleWrapperStyle(container.sketch)
   return {
     container: separateJson(container),
+    fd: separateJson(fd),
     mid: separateJson(mid),
-    fm: separateJson(fm),
-    fd: separateJson(fd)
+    fm: separateJson(fm)
   }
 }
 
 const handleWrapperStyle = sketch => {
-  const {w, h} = sketch
-  return caclWrapperStyle('pdf', w, h)
+  // const {w, h} = sketch
+  // return caclWrapperStyle('pdf', w, h)
+  const {wh} = sketch
+  return caclWrapperStyle('pdf', wh[0], wh[1])
 }
 
 const elementToString = (elements) => {
@@ -43,7 +50,7 @@ const run = async () => {
   const css = buildCss(data, wrapperStyle)
   const params = {
     element: elementString,
-    script: pdfZoomFn,
+    script: pdfScript,
     css
   }
   const fileContent = createFileContent(params)

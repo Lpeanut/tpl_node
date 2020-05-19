@@ -4,9 +4,11 @@ const { separateJson } = require('../cores/data/format-data.js')
 const { buildElement } = require('../cores/handler-html/element-to-string')
 const { buildCss } = require('../cores/handler-css')
 const { createFileContent } = require('../cores/handler-file')
-const { thumbnailZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
+// const { thumbnailZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
+const { caclWrapperStyle } = require('../utils/zoom-script')
+const { thumbnailScript } = require('../platforms/thumbnail')
 
-const jsonpath = path.resolve(__dirname, '../json/soft.json')
+const jsonpath = path.resolve(__dirname, '../json2/soft.json')
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据
@@ -20,8 +22,10 @@ const handleJsonFile = async () => {
 }
 
 const handleWrapperStyle = sketch => {
-  const {w, h} = sketch
-  return caclWrapperStyle('thumbnail', w, h)
+  // const {w, h} = sketch
+  // return caclWrapperStyle('thumbnail', w, h)
+  const {wh} = sketch
+  return caclWrapperStyle('thumbnail', wh[0], wh[1])
 }
 
 const elementToString = (elements) => {
@@ -35,7 +39,7 @@ const run = async () => {
   const css = buildCss(data, wrapperStyle)
   const params = {
     element: elementString,
-    script: thumbnailZoomFn,
+    script: thumbnailScript,
     css
   }
   const fileContent = createFileContent(params)

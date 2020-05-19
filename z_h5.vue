@@ -1,75 +1,97 @@
 
     <template>
       <div class="wrapper">
-        <div class="fd" ><img src="./images/2003_yfd_1.png" class="fd_bg"  /><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/501/logo_fm.svg" class="fd_logo_svg"  /><div class="fd_qrcode_box" ></div><div class="fd_qrcode_text" >扫码阅读美篇原文</div><div content="扫码阅读美篇原文" class="fd_barcode_box" ></div><div class="fd_barcode_text" >B123456123456</div></div>
+        <div class="fd" ><img src="https://static2.ivwen.com/pdf/book/cdn/tpl_pics/503/2003_yfd_1.png" class="fd_bg"  /><Qrcode component="Qrcode" :qrcode="qrcode" :text="tailPageText" class="qrcode_box" ></Qrcode><Barcode component="Barcode" :barcode="barcode" :text="orderNo" class="fd_barcode_box" ></Barcode><div class="fd_blood_01" ></div><div class="fd_blood_03" ></div><div class="fd_blood_02" ></div><div class="fd_blood_04" ></div></div>
       </div>
     </template>
     <script>
-      export default {
-        
-    mounted () {
       
-  const container = document.querySelectorAll(".fd");
-  container.forEach(element => {
-    element.style.transform = 'scale(0.46621621621621623)'
-    element.style.transformOrigin = 'top left'
-    element.style.left = 0;
-    element.style.top = 0;
-  })
+  import Qrcode from "./components/qrcode";
+  import Barcode from "./components/barcode";
 
-    }
-  
+  export default {
+    components: { Qrcode, Barcode },
+    data () {
+      return {
+        pageLen: 1,
+        qrcode: null,
+        barcode: 'https://ss2.meipian.me/ebook/bkcontent/%E9%BB%91%E5%AD%97%E6%9D%A1%E5%BD%A2%E7%A0%811.png'
       }
+    },
+    props: {
+      postData: {
+        type: String,
+      }
+    },
+    computed: {
+      tailPageText () {
+        return this.pageLen > 1 ? '扫码查看作者专栏' : '扫码阅读美篇原文';
+      }
+    },
+    methods: {
+      splitData () {
+        const postData = JSON.parse(this.postData)
+        this.qrcode = postData.qr_code
+        this.pageLen = postData.pageLen
+      }
+    },
+    mounted() {
+      const container = document.querySelectorAll(".fd");
+      container.forEach((element) => {
+        element.style.transform = "scale(0.46621621621621623)";
+        element.style.transformOrigin = "top left";
+        element.style.left = 0;
+        element.style.top = 0;
+      });
+      this.splitData()
+    },
+  };
+
     </script>
     <style scoped>
       .fd{
     width: 1480px;
     height: 2100px;
     position: absolute;
-    left: 31px;
-    top: 31px;background: #D5EFFE;}
+    left: 0px;
+    top: 0px;background: #D5EFFE;position: relative;}
 .fd_bg{
     width: 557px;
     height: 250px;
     position: absolute;
     left: 427px;
-    top: 690px;}
-.fd_logo_svg{
-    width: 390px;
-    height: 41px;
-    position: absolute;
-    left: 100px;
-    top: 100px;}
-.fd_qrcode_box{
+    top: 690px;
+    z-index: 1;}
+.qrcode_box{
     width: 170px;
     height: 170px;
     position: absolute;
     left: 655px;
-    top: 1599px;background: #FFF;}
-.fd_qrcode_text{
-    width: 200px;
-    height: 24px;
-    position: absolute;
-    left: 640px;
-    top: 1777px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;color: #FFF;text-align: center;}
+    top: 1599px;
+    z-index: 2;}
 .fd_barcode_box{
-    width: 320px;
-    height: 110px;
+    width: 257.1px;
+    height: 77px;
     position: absolute;
-    left: 722px;
-    top: 2245px;background: #FFF;}
-.fd_barcode_text{
-    width: 210px;
-    height: 24px;
-    position: absolute;
-    left: 776px;
-    top: 2365px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;color: #FFF;text-align: center;}
+    left: 611px;
+    top: 1884px;
+    z-index: 2;}
+.fd_blood_01{
+    width: 10px;
+    height: 2px;background: #000;left: -30px;top: -0px;position: absolute;
+    z-index: 10;}
+.fd_blood_03{
+    width: 2px;
+    height: 10px;background: #000;left: 0px;top: -30px;position: absolute;
+    z-index: 10;}
+.fd_blood_02{
+    width: 10px;
+    height: 2px;background: #000;left: -30px;bottom: -0px;position: absolute;
+    z-index: 10;}
+.fd_blood_04{
+    width: 2px;
+    height: 10px;background: #000;left: 0px;bottom: -30px;position: absolute;
+    z-index: 10;}
 
     .wrapper{
       position: relative;
