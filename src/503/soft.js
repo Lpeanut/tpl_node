@@ -111,10 +111,11 @@ const mid = {
       content: "%=spineWidth",
       sketch: {
         wh: [197, 10],
-        xy: [65, -30],
+        xy: [65, 0],
         font: [10, 10, 400],
         color: "#333",
         textAlign: "center",
+        z: "10"
       },
     },
     ...createSoftBlood("mid"),

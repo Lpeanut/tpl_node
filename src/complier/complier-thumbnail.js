@@ -7,13 +7,16 @@ const { createFileContent } = require('../cores/handler-file')
 // const { thumbnailZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
 const { caclWrapperStyle } = require('../utils/zoom-script')
 const { thumbnailScript } = require('../platforms/thumbnail')
+const json = require('../503/soft')
 
-const jsonpath = path.resolve(__dirname, '../json2/soft.json')
+// const jsonpath = path.resolve(__dirname, '../json2/soft.json')
+const srcpath = path.resolve(__dirname, '../../../src/pages/tpls/500')
+
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据
 const handleJsonFile = async () => {
-  const json = await readFile(jsonpath)
+  // const json = await readFile(jsonpath)
   const { fm } = json
   wrapperStyle = handleWrapperStyle(fm.sketch)
   return {
@@ -43,7 +46,7 @@ const run = async () => {
     css
   }
   const fileContent = createFileContent(params)
-  writeFile('z_thumbnail.vue', fileContent)
+  writeFile(`thumbnail.vue`, fileContent)
 }
 
 run()

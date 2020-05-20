@@ -6,13 +6,14 @@ const { buildCss } = require('../cores/handler-css')
 const { createFileContent } = require('../cores/handler-file')
 const { h5FdZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
 const { h5FmScript, h5FdScript } = require('../platforms/h5')
-
-const jsonpath = path.resolve(__dirname, '../json2/soft.json')
+let json = {}
+// const jsonpath = path.resolve(__dirname, '../json2/soft.json')
+const srcpath = path.resolve(__dirname, '../../../src/pages/tpls/500')
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据
 const handleJsonFile = async () => {
-  const json = await readFile(jsonpath)
+  // const json = await readFile(jsonpath)
   const { fd } = json
   wrapperStyle = handleWrapperStyle(fd.sketch)
   return {
@@ -29,7 +30,9 @@ const elementToString = (elements) => {
   return elements.fd
 }
 
-const run = async () => {
+const run = async (payload) => {
+  const { jsonData, script, name } = payload
+  json = jsonData
   const data = await handleJsonFile()
   const elements = buildElement(data)
   const elementString = elementToString(elements)
@@ -38,11 +41,14 @@ const run = async () => {
   const params = {
     element: elementString,
     // script: h5ZoomFn,
-    script: h5FdScript,
+    script: script,
     css
   }
   const fileContent = createFileContent(params)
-  writeFile('z_h5.vue', fileContent)
+  writeFile(`${name}.vue`, fileContent)
 }
 
-run()
+
+module.exports = {
+  run
+}

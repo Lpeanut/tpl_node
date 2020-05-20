@@ -4,17 +4,14 @@ const { separateJson } = require('../cores/data/format-data.js')
 const { buildElement } = require('../cores/handler-html/element-to-string')
 const { buildCss } = require('../cores/handler-css')
 const { createFileContent } = require('../cores/handler-file')
-// const { pdfZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
 const { caclWrapperStyle } = require('../utils/zoom-script')
-const { pdfScript } = require('../platforms/pdf')
-const json = require('../503/hard')
+let json = {}
 
-// const jsonpath = path.resolve(__dirname, '../json2/hard.json')
+const srcpath = path.resolve(__dirname, '../../../src/pages/tpls/500')
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据
 const handleJsonFile = async () => {
-  // const json = await readFile(jsonpath)
   const { container, mid, fm, fd } = json
   wrapperStyle = handleWrapperStyle(container.sketch)
   return {
@@ -26,8 +23,6 @@ const handleJsonFile = async () => {
 }
 
 const handleWrapperStyle = sketch => {
-  // const {w, h} = sketch
-  // return caclWrapperStyle('pdf', w, h)
   const {wh} = sketch
   return caclWrapperStyle('pdf', wh[0], wh[1])
 }
@@ -40,7 +35,9 @@ const elementToString = (elements) => {
   return tpl
 }
 
-const run = async () => {
+const run = async payload => {
+  const { jsonData, script, name } = payload
+  json = jsonData
   const data = await handleJsonFile()
   const elements = buildElement(data)
   const elementString = elementToString(elements)
@@ -48,11 +45,13 @@ const run = async () => {
   const css = buildCss(data, wrapperStyle)
   const params = {
     element: elementString,
-    script: pdfScript,
+    script: script,
     css
   }
   const fileContent = createFileContent(params)
-  writeFile('z_pdf.vue', fileContent)
+  writeFile(`${name}.vue`, fileContent)
 }
 
-run()
+module.exports = {
+  run
+}

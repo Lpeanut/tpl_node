@@ -1,8 +1,10 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable quotes */
 const { createHardBlood } = require("../helper/blood.helper");
 const { getStaticImageUrl } = require("../utils/image")
 
 const container = { // 最外层
-  name: "tpl_container",  // 不可改
+  name: "tpl_container", // 不可改
   sketch: {
     wh: [3960, 2560],
     backgroud: "#fff",
@@ -14,7 +16,7 @@ const container = { // 最外层
   ],
 };
 
-const fm = {  // 封面
+const fm = { // 封面
   name: "fm",
   sketch: {
     wh: [1780, 2560],
