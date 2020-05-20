@@ -30,4 +30,8 @@ const writeFile = (name, content) => {
   ))
 }
 
-module.exports = { readFile, writeFile }
+const getDirName = () => {
+  return __dirname.split('/').slice(-1)[0]
+}
+
+module.exports = { readFile, writeFile, getDirName }

@@ -7,16 +7,14 @@ const { createFileContent } = require('../cores/handler-file')
 // const { pdfZoomFn, caclWrapperStyle } = require('../utils/zoom-script')
 const { caclWrapperStyle } = require('../utils/zoom-script')
 const { pdfScript } = require('../platforms/pdf')
-const json = require('../json2/soft')
+const json = require('../503/hard')
 
-
-const jsonpath = path.resolve(__dirname, '../json2/hard.json')
+// const jsonpath = path.resolve(__dirname, '../json2/hard.json')
 let wrapperStyle
 
 // 处理后会得到结构和cssSketch分离的数据
 const handleJsonFile = async () => {
   // const json = await readFile(jsonpath)
-  console.log(json)
   const { container, mid, fm, fd } = json
   wrapperStyle = handleWrapperStyle(container.sketch)
   return {

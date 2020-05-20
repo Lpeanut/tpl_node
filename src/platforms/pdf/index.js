@@ -74,7 +74,6 @@ export default {
         const wrapper = document.querySelector('.wrapper')
         wrapper.style.width = (fm + fd + mid) * 0.37757575758 + 'px'
         wrapper.style.padding = 30 * 0.37757575758 + 'px'
-        wrapper.style.border = "1px solid blue"
       })
     }
   },

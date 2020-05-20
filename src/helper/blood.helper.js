@@ -16,7 +16,11 @@ const hardBlood = {
     {wh: [2, 30], style: { left: '0', top: '-100px'}},
     {wh: [2, 30], style: { right: '0', top: '-100px'}},
     {wh: [2, 30], style: { left: '0', bottom: '-100px'}},
-    {wh: [2, 30], style: { left: '0', bottom: '-100px'}},
+    {wh: [2, 30], style: { right: '0', bottom: '-100px'}},
+    {wh: [2, 30], style: { left: '-99px', top: '-100px'}},
+    {wh: [2, 30], style: { right: '-99px', top: '-100px'}},
+    {wh: [2, 30], style: { left: '-99px', bottom: '-100px'}},
+    {wh: [2, 30], style: { right: '-99px', bottom: '-100px'}},
   ]
 }
 
